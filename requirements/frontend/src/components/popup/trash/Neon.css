@@ -1,0 +1,33 @@
+.neonText { 
+    color: transparent;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: -20px;
+}
+    .Solid {
+
+        background: linear-gradient(to bottom, var(--topColor), var(--bottomColor) 30%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 80px var(--topColor);
+        margin-top: -49px;
+    }
+    .Shadow
+    {
+        -webkit-text-stroke: 8px rgb(100, 189, 100);
+        margin-top: -50px;
+    }
+    .Stroke {
+        -webkit-text-stroke: 2px #ffffff;
+        margin-top: -49px;
+    }  
+    .Blur
+    {
+        background: linear-gradient(to bottom, var(--topColor), var(--bottomColor) 30%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter:blur(15px);
+
+    }

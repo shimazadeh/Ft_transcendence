@@ -1,0 +1,13 @@
+.EmptyMessage {
+
+    margin-top: 15%; align-self: center; padding: 30px;
+    color:white; font-size: 48px; font-family: Montserrat, sans-serif; font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.8); border-radius: 20px;
+    text-shadow: 0 0 20px #fff;
+    cursor : pointer; 
+    transition: box-shadow 0.5s, text-shadow 0.5s;
+}
+.EmptyMessage:hover {
+    box-shadow: 0 0 20px #0ff, 0 0 50px #0ff;
+    text-shadow: 0 0 20px #0ff, 0 0 50px #0ff;
+}

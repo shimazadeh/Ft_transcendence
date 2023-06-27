@@ -1,0 +1,160 @@
+.cyan-stroke
+{
+	-webkit-text-stroke: 0.5px #40ddff;
+}
+
+.purple-stroke
+{
+	-webkit-text-stroke: 0.5px #f975ed;
+}
+
+.red
+{
+	font-weight: 300;
+	font-family: 'Montserrat', sans-serif;
+	color: #FF0000;
+}
+
+.green
+{
+	font-weight: 300;
+	font-family: 'Montserrat', sans-serif;
+	color: #00FF00;
+}
+
+.text
+{
+	font-weight: 300;
+	font-family: 'Montserrat', sans-serif;
+	color: #FFFFFF;
+}
+
+.little
+{
+	font-size: 20px;
+	line-height: normal;
+}
+
+.medium
+{
+	font-style: normal;
+	font-size: 24px;
+	line-height: normal;
+}
+
+.big
+{
+	font-style: normal;
+	font-size: 30px;
+	line-height: normal;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.neon-text {
+	text-shadow:
+	  0 0 7px #fff,
+	  0 0 10px #fff,
+	  0 0 21px #fff,
+	  0 0 42px #40ddff,
+	  0 0 82px #40ddff,
+	  0 0 92px #40ddff,
+	  0 0 102px #40ddff,
+	  0 0 151px #40ddff;
+  }
+
+.neon-cyan {
+	text-shadow:	0 0 42px #40ddff,
+	  				0 0 82px #40ddff,
+					0 0 92px #40ddff,
+					0 0 102px #40ddff,
+	  				0 0 151px #40ddff;
+}
+
+.neon-big-cyan {
+	text-shadow:
+					0 0 7px #40ddff,
+					0 0 10px #40ddff,
+					0 0 21px #40ddff,
+					0 0 42px #40ddff,
+	  				0 0 82px #40ddff,
+					0 0 92px #40ddff,
+					0 0 102px #40ddff,
+	  				0 0 151px #40ddff;
+}
+
+.neon-yellow {
+	text-shadow:
+					0 0 7px #ffe600,
+					0 0 10px #ffe600,
+					0 0 21px #ffe600,
+					0 0 42px #ffe600,
+	  				0 0 82px #ffe600,
+					0 0 92px #ffe600,
+					0 0 102px #ffe600,
+	  				0 0 151px #ffe600;
+}
+
+.neon-little-yellow {
+	text-shadow:
+					0 0 7px #ffe600,
+					0 0 10px #ffe600,
+					0 0 21px #ffe600;
+}
+
+.neon-purple {
+	text-shadow:
+					0 0 7px #f975ed,
+					0 0 10px #f975ed,
+					0 0 21px #f975ed,
+					0 0 42px #f975ed,
+	  				0 0 82px #f975ed,
+					0 0 92px #f975ed,
+					0 0 102px #f975ed,
+	  				0 0 151px #f975ed;
+}
+
+.neon-dark-purple {
+	text-shadow:
+					0 0 7px #a436ff,
+					0 0 10px #a436ff,
+					0 0 21px #a436ff,
+					0 0 42px #a436ff,
+	  				0 0 82px #a436ff,
+					0 0 92px #a436ff,
+					0 0 102px #a436ff,
+	  				0 0 151px #a436ff;
+}
+
+.neon-red {
+	text-shadow:
+					0 0 7px #ff0000,
+					0 0 10px #ff0000,
+					0 0 21px #ff0000,
+					0 0 42px #ff0000,
+	  				0 0 82px #ff0000,
+					0 0 92px #ff0000,
+					0 0 102px #ff0000,
+	  				0 0 151px #ff0000;
+}
+
+.neon-green {
+	text-shadow:
+					0 0 7px #00ff00,
+					0 0 10px #00ff00,
+					0 0 21px #00ff00,
+					0 0 42px #00ff00,
+	  				0 0 82px #00ff00,
+					0 0 92px #00ff00,
+					0 0 102px #00ff00,
+	  				0 0 151px #00ff00;
+}
+
+.neon-white {
+	text-shadow:
+					0 0 7px white,
+					0 0 21px white;
+}

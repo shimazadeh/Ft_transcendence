@@ -1,0 +1,123 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+	id Int @id @default(autoincrement())
+	createAt DateTime @default(now()) // Time at creation
+	updateAt DateTime @updatedAt
+
+	state					String	@default("online")
+	hash 					String?
+	username 				String @unique
+	gameLogin				String? @unique
+	avatar					String?
+	avatarSelected			Boolean @default(false)
+	access_token			String?
+	TwoFASecret				String?
+	TwoFAenabled			Boolean @default(false)
+	isTwoFAverified			Boolean @default(false)
+	elo 					Int @default(400)
+	win 					Int @default(0)
+	loose 					Int @default(0)
+ 	friend					Friend[] @relation("UserFriend")
+	friendsOf				Friend[] @relation("FriendUser")
+	friendRequestsSent		FriendRequest[] @relation("FriendRequestSender")
+  	friendRequestsReceived	FriendRequest[] @relation("FriendRequestRecipient")
+	bloque					bloqueUser[] @relation("BloqueSender")
+	bloquedBy				bloqueUser[] @relation("BloquedRecipient")
+	history					History[]
+	rooms                   Room[]               @relation("RoomOwner")
+	messages                Message[]            @relation("messageAuthor")
+	whitelistedRooms        Room[]               @relation("RoomWhitelist")
+	adminRooms         		Room[]               @relation("Admin")
+	bannedRooms         	Room[]               @relation("Banned")
+	connectedRooms         	Room[]               @relation("Connected")
+	mutedRooms         		Room[]               @relation("Muted")
+	@@map("users")
+}
+
+model Friend {
+
+	id          Int    @id @default(autoincrement())
+	createdAt   DateTime @default(now())
+	user        User   @relation("UserFriend", fields:[userId], references: [id])
+	userId		Int
+	friend		User @relation("FriendUser", fields:[friendId], references: [id])
+	friendId	Int @default(-1)
+	@@unique([userId, friendId])
+  	@@map("friends")
+}
+
+model FriendRequest {
+  id        Int       @id @default(autoincrement())
+  senderId  Int
+  sender    User      @relation("FriendRequestSender", fields: [senderId], references: [id])
+  recipientId Int
+  recipient User      @relation("FriendRequestRecipient", fields: [recipientId], references: [id])
+  status    String    @default("pending")
+}
+
+model bloqueUser {
+  id        Int       @id @default(autoincrement())
+  senderId  Int
+  sender    User      @relation("BloqueSender", fields: [senderId], references: [id])
+  recipientId Int
+  recipient User      @relation("BloquedRecipient", fields: [recipientId], references: [id])
+}
+
+model History {
+	id          Int    @id @default(autoincrement())
+	createdAt   DateTime @default(now())
+
+	user		User   @relation(fields: [userId], references: [id])
+	userId		Int
+
+	result		String
+	mode		String
+	pointsWon	Int
+	pointsLost	Int
+	elo			Int
+}
+
+model Room {
+	id       	Int       @id @default(autoincrement())
+	createdAt   DateTime @default(now())
+
+	active		Boolean	@default(true)
+	name     	String
+	type		String
+	password	String?
+	directId	String?
+
+	ownerId     Int
+  	owner       User    @relation("RoomOwner", fields: [ownerId], references: [id])
+	whitelist   User[]   @relation("RoomWhitelist")
+	admin		User[]   @relation("Admin")
+	banned		User[]   @relation("Banned")
+	connected	User[]	@relation("Connected")
+	muted		User[]	@relation("Muted")
+
+	messages	Message[]
+}
+
+model Message {
+	id          Int    @id @default(autoincrement())
+	createdAt   DateTime @default(now())
+
+	authorId	Int
+  	author      User	@relation("messageAuthor", fields: [authorId], references: [id])
+	text		String
+
+	room      	Room     @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  	roomId    	Int
+}

@@ -1,0 +1,5 @@
+srcs/requirements/TODO
+srcs/requirements/frontend/.env
+srcs/requirements/backend/.env
+
+srcs/requirements/backend/prisma/migrations

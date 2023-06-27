@@ -1,0 +1,62 @@
+.Head {
+    /* border: 3px solid white;
+    background-color: lightblue; */
+    
+    margin: 10px;
+    margin-bottom: 5px;
+    flex-basis: 120px;
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: row;
+}
+    .userName {
+        /* border: 3px solid white;
+        background-color: lightsteelblue; */
+
+        margin: 5px;
+        flex-basis: content;
+        min-width: 450px;
+
+        font-family: montserrat;
+        font-weight: 800;
+        font-size: 50px;
+        text-align: right;
+        padding: 5px;
+        padding-top: 30px;
+    }
+    .headRight {
+        /* border: 3px solid white;
+        background-color: lightseagreen; */
+
+        margin: 5px;
+        flex-grow: 1;
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap");
+
+.Popup {
+    /* background-image: url("../../img/PopupBckg.png"); */
+    border: 4px solid #40DEFF;
+    box-shadow: 0 0 10px #40DEFF, 0 0 60px #40DEFF, inset 0 0 40px #40DEFF;
+
+
+    /* background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+    position: relative;
+    overflow: hidden;
+    
+    width: 1200px;
+    height: 550px;
+    top: -5%;
+    left: 0%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    /* VIEW */
+    /* border: 3px solid white;
+    background-color: black; */   
+}

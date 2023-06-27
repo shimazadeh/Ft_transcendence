@@ -1,0 +1,154 @@
+:variables {
+    --salon-a: red;
+    --salon-b: red;
+    --crea-a : red;
+    --crea-b : red;
+}
+
+.Container {
+	width: 95%;
+	height: 90%;
+	font-family: Montserrat, sans-serif;
+	display: flex; justify-content: space-between; color: #fff;
+    flex-direction: column;
+}
+.TopBar {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 90%;
+	height: 20%;
+	align-self: center;
+	display: flex; justify-content: flex-end;
+	border-radius: 10px;
+
+}
+.SalonType {
+    align-self: center;
+	color : #fff; 	font-weight: 800; font-size: 24px;
+	border: 3px solid var(--salon-a); border-radius: 10px;
+	background-color: #000;
+	min-width: 170px; min-height: 80px;
+	margin: 20px; padding: 20px;
+	box-shadow: inset 0 0 50px var(--salon-b), 0 0 10px var(--salon-a);
+	cursor: pointer; transition: box-shadow 0.8s, border 0.8s;
+}
+.SalonType:hover {
+	box-shadow: inset 0 0 50px var(--salon-b), 0 0 10px var(--salon-a), 0 0 40px var(--salon-a);
+}
+.CreateButton {
+    align-self: center;
+	color : #fff; 	font-weight: 800; font-size: 16px;
+	border: 3px solid var(--crea-a); border-radius: 10px;
+	background-color: #000;
+	min-width: 80px; min-height: 80px; max-width: 100px;
+	margin: 20px; padding: 5px;
+	box-shadow: inset 0 0 50px var(--crea-b), 0 0 10px var(--crea-a);
+	cursor: pointer; transition: box-shadow 0.8s, border 0.8s;
+
+}
+.CreateButton:hover {
+	box-shadow: inset 0 0 50px var(--crea-b), 0 0 10px var(--crea-a), 0 0 40px var(--crea-a);
+}
+
+.friendBox {
+    width: 80px; min-width:80px;
+    height: 80px; min-width:80px;
+    align-self: center;
+    margin: 20px; padding-right: 10px;
+	border: 3px solid #fff; border-radius: 10px;
+	box-shadow: inset 0 0 50px #666, 0 0 10px #fff;
+    display: flex;
+    cursor: pointer; transition: box-shadow 0.8s;
+}
+.friendBox:hover {
+	box-shadow: inset 0 0 50px #666, 0 0 10px #fff, 0 0 40px #fff;
+}
+.friendImg {
+    width: 50px; min-width:50px;
+    height: 50px; min-width:50px;
+    align-self: center;
+    margin: 20px;
+}
+.ChatRoomsText {
+    align-self: center; padding-right: 15%;
+    color: #fff;
+    font-family: Montserrat, sans-serif; font-size: 36px; font-weight: 800;
+    text-shadow: 0 0 30px var(--salon-a),  0 0 50px var(--salon-a), 0 0 100px var(--salon-a) ;
+    transition: text-shadow 0.8s;
+    cursor: default;
+}
+
+.SelectScreen {
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 90%;
+	height: 78%;
+	align-self: center;
+	display: flex; flex-direction: column;
+	border-radius: 10px;
+    overflow: auto;
+}
+.RoomBox {
+    height: 70px; margin: 10px;
+	background-color: rgba(0, 0, 0, 0.8);
+    font-size:24px; flex: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex; justify-content: space-around;
+    transition: box-shadow 0.5s, background-color 0.5s;
+}
+.RoomBox:hover {
+    box-shadow: 0 0 10px var(--salon-a);
+	background-color: rgba(0, 0, 0, 1);
+}
+.legend {
+    color: #fff;
+    font-size: 18px; font-style: italic;
+}
+.salon {
+    font-weight: 600; color: var(--salon-a);
+    transition: color 0.8s;
+    text-shadow: 0 0 10px var(--salon-a) ;
+
+}
+.ownerTxt {
+    color: yellow;
+    text-shadow: 0 0 10px yellow ;
+}
+.iconMsg {
+    height: 40%;
+    align-self: center;
+}
+
+.createPopupInput {
+	width: 80%; height: 40%; align-self: center;
+	background-color: rgba(0, 0, 0, 0.8); border-radius: 10px;
+	border: none; border-radius: 50px;
+	border: 2px solid #0ff; box-shadow: inset 0 0 20px #055, 0 0 10px #0ff;
+	color: #fff; font-family: Montserrat, sans-serif;  font-weight: 600; font-size: large;
+	padding-left: 20px; margin: 15px;
+}
+
+.EmptySelection {
+	align-self: center; margin-top: 10%;
+	font-size: 48px; font-weight: 600; 
+	background-color: rgba(0, 0, 0, 0.8); padding: 30px; border-radius: 10px;
+	cursor: default;
+    text-shadow: 0 0 30px var(--salon-a) ;
+    transition: text-shadow 0.8s;
+    cursor: default;
+}
+
+.errorMessage {
+	align-self: center;
+	font-size: 18px; font-weight: 600; text-align: center;
+    text-shadow: 0 0 20px #fff ;
+}
+
+.directMsgEntry {
+   	align-self: center;
+	font-size: 36px; font-weight: 600; text-align: center;
+    text-shadow: 0 0 20px #fff ;
+	transition: text-shadow 0.5s;
+}
+.directMsgEntry:hover {
+    text-shadow: 0 0 20px #f0f, 0 0 60px #f0f;
+}

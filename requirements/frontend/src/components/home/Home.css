@@ -1,0 +1,101 @@
+.baground
+{
+  background-image: url("../../img/background.gif");
+  position: absolute;
+  min-width: 1280px;
+  min-height: 832px;
+  height:100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
+}
+
+.containerFullPage
+{
+  /* rectangle */
+  position: absolute;
+  height:100%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.containerRectangle
+{
+  position: absolute;
+  width: 73%;
+  height: 78%;
+  min-height: 656px;
+  min-width: 1079px;
+  box-sizing: border-box;
+}
+.rectangleRight, .rectangleTop, .rectangleBottomLeft, .rectangleBottomRight, .rectangleLeft
+{
+  position: absolute;
+  background-color: #FFFFFF;
+  /* neon */
+  box-shadow: inset 0px 0px 20px 4px #f975ed, 0px 0px 20px 4px #f975ed;
+}
+
+.rectangleTop
+{
+  bottom:100%;
+  height: 4px;
+  width: 100.3%;
+}
+
+.rectangleRight
+{
+  height: 100%;
+  width: 4px;
+  left: 100%;
+}
+
+.rectangleLeft
+{
+  bottom: 0px;
+  height: 100%;
+  width: 4px;
+}
+
+.rectangleBottomLeft
+{
+  bottom: 0px;
+  height: 4px;
+  width: 42.6%;
+}
+
+.rectangleBottomRight
+{
+  bottom: 0px;
+  left: 60%;
+  height: 4px;
+  width: 40%;
+}
+
+.containerHeader
+{
+  min-height: 132px;
+  width: 100;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4%;
+}
+
+.containerCenter
+{
+  top: 20%;
+  position: absolute;
+  min-height: 507px;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

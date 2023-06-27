@@ -1,0 +1,278 @@
+.ChatRoom {
+	/* background-color: #600; */
+	width: 95%;
+	height: 90%;
+	font-family: Montserrat, sans-serif;
+	display: flex; justify-content: space-between;
+}
+
+.UsersBlock {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 30%;
+	height: 100%;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+.UsersTopBar {
+	color : #fff;
+	display: flex;
+	justify-content: space-around;
+}
+.salonButton {
+	align-self: center;
+	color : #fff; 	font-weight: 600;
+	border: 3px solid #0ff;
+	border-radius: 10px;
+	background-color: #000;
+	min-width: 80px;
+	margin: 10px;
+	box-shadow: inset 0 0 50px #055, 0 0 10px #0ff;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.blockedButton {
+	align-self: center;
+	color : #fff; 	font-weight: 600;
+	border: 3px solid #e00;
+	border-radius: 10px;
+	background-color: #000;
+	min-width: 80px;
+	margin: 10px;
+	box-shadow: inset 0 0 50px #500, 0 0 10px #e00;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.friendsButton {
+	align-self: center;
+	color : #fff; 	font-weight: 600;
+	border: 3px solid #f0f;
+	border-radius: 10px;
+	background-color: #000;
+	min-width: 80px;
+	margin: 10px;
+	box-shadow: inset 0 0 50px #606, 0 0 10px #f0f;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.salonButton:hover {
+	box-shadow: inset 0 0 50px #055, 0 0 10px #0ff, 0 0 40px #0ff;
+}
+.blockedButton:hover {
+	box-shadow: inset 0 0 50px #500, 0 0 10px #e00, 0 0 40px #e00;
+}
+.friendsButton:hover {
+	box-shadow: inset 0 0 50px #606, 0 0 10px #f0f, 0 0 40px #f0f;
+}
+
+.UsersList {
+	align-self: center; width: 90%; height: 90%; margin: 5px; border-radius: 10px;
+	display: flex; flex-direction: column; padding: 8px;
+	align-items: center;
+}
+
+.EntryUser {
+	font-size: 18px; padding: 5px; font-weight: 800;
+	cursor: pointer;
+	transition: text-shadow 0.2s;
+}
+.EntryUser:hover {
+	/* box-shadow: 0 0 40px #fff; */
+	text-shadow: 0 0 10px #fff, 0 0 40px #fff;
+}
+
+.popupMsg {
+	width: 40%; height : 15%; max-width: 400px; max-height: 200px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid #fff; background-color: #000;
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+}
+.popupMsgText {
+	align-self: center;
+	color: #fff;
+	font-size: 24px;
+	text-shadow: 0 0 10px #fff, 0 0 40px #fff;
+}
+.closeMsg {
+	cursor: pointer;
+	font-size: 50px;
+	color : #e0e;
+	text-shadow: 0 0 10px #e0e, 0 0 40px #e0e;
+	cursor: pointer;
+}
+
+/* RightBlock */
+
+.RightBlock {
+	/* background-color: #fff; */
+	width: 80%; height: 100%; margin-left: 10px;
+	display: flex; flex-direction: column; justify-content: space-between;
+}
+
+.RoomBlock {
+	width: 92%; height: 20%; 
+	background-color: rgba(0, 0, 0, 0.8); border-radius: 10px;
+	display: flex; justify-content: space-around;
+}
+.RoomName {
+	align-self: center;
+	min-width: 80px;
+	margin: 10px;  padding-bottom: 5px; padding-left: 15px; padding-right: 15px;
+	color : #fff; 	font-weight: 800; font-size: 32px;
+	border: 3px solid #eee; border-radius: 20px; background-color: #000;
+	box-shadow: inset 0 0 50px #666, 0 0 10px #eee;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.RoomName:hover {
+	box-shadow: inset 0 0 50px #666, 0 0 10px #eee, 0 0 40px #eee;
+}
+.RoomRank {
+	align-self: center;
+	min-width: 120px;
+	margin: 10px;  padding-bottom: 5px; padding-left: 15px; padding-right: 15px;
+	color : #fff; 	font-weight: 800; font-size: 18px;
+	border-radius: 20px;
+	cursor: default;
+}
+.Leave {
+	align-self: center;
+	min-width: 80px;
+	margin: 10px;  padding-bottom: 5px; padding-left: 15px; padding-right: 15px;
+	color : #fff; 	font-weight: 600; font-size: 24px;
+	border: 3px solid #444; border-radius: 20px; background-color: #000;
+	box-shadow: inset 0 0 50px #444, 0 0 10px #444;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.Leave:hover {
+	box-shadow: inset 0 0 50px #444, 0 0 10px #444, 0 0 40px #444;
+}
+.roomOptions {
+	position: fixed;
+	background-color: #000;
+	padding: 10px;
+	border: 2px solid #fff;
+	display: flex;
+	flex-direction: column;
+	color: #fff; font-family: Montserrat, sans-serif;  font-weight: 600;  font-size: 12px;
+}
+.roomOptionsContent {
+	cursor: pointer;
+	padding: 10px;
+}
+
+.MessagesBlock {
+	width: 92%; height: 66%; 
+	background-color: rgba(0, 0, 0, 0.8); border-radius: 10px;
+	padding-bottom: 10px; padding-top: 10px;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-start;
+	overflow-y: auto;
+	word-wrap: break-word;
+}
+.MessageBar {
+	width: 92%; height: 8%; align-self: left; margin-top: 5px;
+	border: none; border-radius: 50px;
+	display: flex; justify-content: space-between;
+}
+.InputMessages {
+	width: 90%; height: 90%; align-self: center;
+	background-color: rgba(0, 0, 0, 0.8); border-radius: 10px;
+	border: none; border-radius: 50px;
+	border: 2px solid #0ff; box-shadow: inset 0 0 20px #055, 0 0 10px #0ff;
+	color: #fff; font-family: Montserrat, sans-serif;  font-weight: 600; font-size: large;
+	padding-left: 20px;
+}
+.SendIcon {
+	width: 5%;	height: 74%; align-self: center; margin: 15px;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8); border-radius: 20px;
+	padding: 5px;
+	border: 2px solid #0ff;
+	box-shadow: 0 0 10px #0ff;
+	transition: box-shadow 0.2s;
+}
+.SendIcon:hover {
+	box-shadow: 0 0 10px #0ff, 0 0 40px #0ff;
+}
+
+/* const passStyle : CSSProperties = { width: '20%', height : '15%', position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', border: '2px solid #fff', backgroundColor: '#000', padding: '10px', borderRadius: '5px', color: '#fff', fontWeight: '800', fontSize: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center',
+} */
+
+.passPopup {
+	width: 40%; height : 15%; max-width: 400px; max-height: 200px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid #fff; background-color: #000;
+	padding: 10px;
+	border-radius: 5px;
+	display: flex; flex-direction: column;
+	justify-content: center;
+}
+.PassTop {
+	display: flex; flex-direction: row; justify-content: space-between;
+	margin: 10px;
+}
+.PassInput {
+	width: 80%; height: 50%; align-self: center;
+	background-color: rgba(0, 0, 0, 0.8); border-radius: 10px;
+	border: none; border-radius: 50px;
+	border: 2px solid #0ff; box-shadow: inset 0 0 20px #055, 0 0 10px #0ff;
+	color: #fff; font-family: Montserrat, sans-serif;  font-weight: 600; font-size: large;
+	padding-left: 20px;
+
+}
+.PassShow {
+	align-self: center; padding: 4px;
+	color : #fff; 	font-weight: 400; font-size: 12px;
+	border: 2px solid #0ff;
+	border-radius: 20px;
+	background-color: #000;
+	min-width: 30px; max-width: 50px;
+	margin: 10px;
+	box-shadow: inset 0 0 50px #055, 0 0 10px #0ff;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.PassButton {
+	align-self: center; 
+	color : #fff; 	font-weight: 600;
+	border: 3px solid #aaa;
+	border-radius: 10px;
+	background-color: #000;
+	min-width: 80px;
+	margin: 10px;
+	box-shadow: inset 0 0 50px #777, 0 0 10px #aaa;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.PassButton:hover {
+	box-shadow: inset 0 0 50px #aaa, 0 0 10px #aaa, 0 0 40px #aaa;
+}
+
+
+
+::-webkit-scrollbar{
+	background-color: #000;
+	box-shadow: 0 0 10px #0bb, 0 0 40px #0bb;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #0bb;
+	transition: background-color 0.3s;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: #0ff;
+}

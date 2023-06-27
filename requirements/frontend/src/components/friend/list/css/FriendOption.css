@@ -1,0 +1,13 @@
+.containerFriendOption {
+    height: 100%;
+    width: 97%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}

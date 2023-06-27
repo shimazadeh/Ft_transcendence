@@ -1,0 +1,120 @@
+.containerFooter
+{
+    position: relative;
+    min-height: 20px;
+    height: 30%;
+    width: 100%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.containerEloUnderName
+{
+    position: relative;
+    height: 100%;
+    width: 75%;
+
+    border: 3px solid rgba(255, 255, 255, 0.58);
+    border-radius: 25px;
+}
+
+.eloText
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:calc(12px + 1vh);
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.bronze, .silver, .gold, .crack, .ultimeCrack
+{
+    position: absolute;
+    left: 0%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.gold
+{ 
+    min-height: 85px;
+    min-width: 80px;
+    height: 8.5vh;
+    width: 8vh; 
+    filter: drop-shadow(0px 0px 8px gold);
+    background-image: url(../../../../../img/goldRank.png);
+}
+
+.gold:hover
+{
+    filter: drop-shadow(0px 0px 20px gold);
+}
+
+.bronze
+{ 
+    min-height: 95px;
+    min-width: 75px;
+    height: 9.3vh;
+    width: 7.5vh;
+    filter: drop-shadow(0px 0px 8px #741010);
+    background-image: url(../../../../../img/bronzeRank.png);
+}
+
+.bronze:hover
+{
+    filter: drop-shadow(0px 0px 20px #741010);
+}
+
+.silver
+{ 
+    min-height: 102px;
+    min-width: 65px;
+    height: 11vh;
+    width: 7vh;
+    filter: drop-shadow(0px 0px 8px #86CFCB);
+    background-image: url(../../../../../img/silverRank.png);
+}
+
+.silver:hover
+{
+    filter: drop-shadow(0px 0px 20px #86CFCB);
+}
+
+.crack
+{ 
+    min-height: 90px;
+    min-width: 75px;
+    height: 8.7vh;
+    width: 7.5vh;
+    filter: drop-shadow(0px 0px 8px #9409AA);
+    background-image: url(../../../../../img/crakRank.png);
+}
+
+.crack:hover
+{
+    filter: drop-shadow(0px 0px 20px #9409AA);
+}
+
+.ultimeCrack
+{ 
+    min-height: 65px;
+    min-width: 80px;
+    height: 6vh;
+    width: 8vh; 
+    filter: drop-shadow(0px 0px 8px white);
+    background-image: url(../../../../../img/ultimeCrackRank.png);
+}
+
+.ultimeCrack:hover
+{
+    filter: drop-shadow(0px 0px 20px white);
+}

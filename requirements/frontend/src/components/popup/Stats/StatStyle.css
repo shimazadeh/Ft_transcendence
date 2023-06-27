@@ -1,0 +1,19 @@
+.avatar-public {
+    min-height: 100px;
+    min-width: 100px;
+    background-size: cover;
+	background-position: center;
+    height: 10vh;
+    width: 10vh;
+    transition: drop-shadow 0.3s ease;
+    filter: drop-shadow(0px 0px 5px cyan) drop-shadow(0px 0px 10px cyan) drop-shadow(0px 0px 15px cyan);
+    transition: all 0.1s ease-in-out;
+    border-radius: 70%;
+}
+
+.iconborder {
+    transition: drop-shadow 0.3s ease;
+    filter: drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 8px white);
+    cursor: pointer;
+    border-radius: 70%;
+}
